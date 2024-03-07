@@ -1,0 +1,92 @@
+.several {
+  position: relative;
+  background-color: #e9ede6;
+  margin-bottom: 90px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1920px;
+    height: 80px;
+    bottom: -80px;
+    z-index: 2;
+    background-image: url(../img/advantages-delta.png);
+    background-size: cover;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 65px;
+    padding-top: 24px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1c201e;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 65px;
+    }
+
+    &:last-child {
+      padding-bottom: 95px;
+    }
+
+  }
+
+  &__box {
+    margin-left: 50px;
+
+    &--accent {
+      margin: 0;
+      margin-right: 60px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 360px;
+    margin: 0;
+    margin-bottom: 35px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #000;
+  }
+
+  &__text {
+    max-width: 520px;
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: var(--second-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #979491;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+  }
+
+  &__svg {
+    margin-right: 15px;
+  }
+}

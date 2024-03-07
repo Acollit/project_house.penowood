@@ -1,0 +1,121 @@
+.advantages {
+  background-image: url(../img/advantages-bg.png);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1920px;
+    height: 80px;
+    bottom: 0;
+    z-index: 2;
+    background-image: url(../img/advantages-delta.png);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    color: #000;
+  }
+
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 110px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 118px;
+      height: 118px;
+      background-image: url(../img/planet.png);
+      z-index: 3;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item {
+    padding-top: 38px;
+    padding-left: 50px;
+    position: relative;
+    padding-bottom: 155px;
+
+    &:nth-child(1) {
+      border-right: 1px solid #000;
+
+    }
+
+
+
+    &:nth-child(3) {
+      border-right: 1px solid #000;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    &:nth-child(4) {
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    max-width: 336px;
+    padding-left: 60px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    color: #000;
+
+    &::before {
+      content: '01.';
+      position: absolute;
+      left: 0;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 150%;
+      color: #efad81;
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #979491;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 80px;
+    display: inline-block;
+    padding: 16px 17px;
+    border: 1px solid #000;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    text-align: center;
+    color: #000;
+  }
+}

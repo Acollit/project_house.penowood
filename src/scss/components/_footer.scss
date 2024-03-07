@@ -1,0 +1,15 @@
+.footer {
+  background: #F6F1ED;
+  padding: 16px 0;
+
+  &__copitate {
+    margin: 0;
+    font-family: var(--font5);
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 150%;
+    color: #2e2925;
+    opacity: 0.6;
+  }
+}
