@@ -3,6 +3,11 @@
   background-color: #e9ede6;
   margin-bottom: 90px;
 
+  @include tablet {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -14,6 +19,10 @@
     background-size: cover;
     left: 0;
     transform: rotate(180deg);
+
+    @include tablet {
+      background-image: none;
+    }
   }
 
   &__title {
@@ -27,10 +36,20 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: #1c201e;
+
+    @include tablet {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+    }
   }
 
   &__item {
     display: flex;
+    justify-content: space-between;
 
     &:not(:last-child) {
       margin-bottom: 65px;
@@ -40,19 +59,49 @@
       padding-bottom: 95px;
     }
 
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      .several__img {
+        box-shadow: 16px 16px 0 0 #efad81;
+
+        @include tablet {
+          box-shadow: none;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+
+      &:last-child {
+        padding-bottom: 45px;
+      }
+    }
+
+    @include small-tablet {
+      .image {
+        max-height: 250px;
+      }
+    }
+
   }
 
   &__box {
-    margin-left: 50px;
-
-    &--accent {
-      margin: 0;
-      margin-right: 60px;
-    }
+    max-width: 540px;
+    width: 100%;
   }
 
   &__subtitle {
-    max-width: 360px;
+    max-width: 390px;
     margin: 0;
     margin-bottom: 35px;
     font-family: var(--font-family);
@@ -61,6 +110,15 @@
     line-height: 110%;
     letter-spacing: -0.02em;
     color: #000;
+
+    @include tablet {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+    }
   }
 
   &__text {
@@ -74,6 +132,16 @@
     line-height: 170%;
     letter-spacing: -0.01em;
     color: #979491;
+
+    @include tablet {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
   }
 
   &__btn {
@@ -84,9 +152,38 @@
     font-size: 16px;
     line-height: 150%;
     color: #000;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__svg {
     margin-right: 15px;
+
+    @include small-tablet {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    max-width: 195px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 53px;
+    padding: 13px 12px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #f0f0f0;
+    background: #efad81;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
   }
 }

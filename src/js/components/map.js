@@ -32,5 +32,10 @@ function init() {
   map.controls.remove('rulerControl'); // удаляем контрол правил
   map.behaviors.disable(['scrollZoom']);
 
+  var myPlacemark = new ymaps.Placemark([56.951258, 32.736630], {
+  }, {
+    preset: 'islands#icon' // Пресет для красной иконки
+  });
 
+  map.geoObjects.add(myPlacemark);
 }

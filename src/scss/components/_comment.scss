@@ -3,18 +3,33 @@
   padding: 80px 0 60px 0;
   margin-top: 50px;
 
+  @include tablet {
+    margin-top: 10px;
+    padding: 30px 0 30px 0;
+  }
+
   &__content {
     display: flex;
-
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__box {
     &:first-child {
       max-width: 455px;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
     }
 
     &:last-child {
       display: flex;
+
+      @include small-tablet {
+        flex-direction: column;
+      }
     }
   }
 
@@ -28,6 +43,12 @@
     line-height: 110%;
     letter-spacing: -0.02em;
     color: #1c201e;
+
+    @include small-tablet {
+      font-size: 30px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
   }
 
   &__descr {
@@ -38,6 +59,10 @@
     line-height: 170%;
     letter-spacing: -0.01em;
     color: #1c201e;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__item {
@@ -45,8 +70,17 @@
     box-shadow: 6px 6px 0 0 #efad81;
     background: #fff;
 
+    @include small-tablet {
+      padding: 15px 15px;
+    }
+
     &:first-child {
       margin-right: 25px;
+
+      @include small-tablet {
+        margin: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -60,11 +94,21 @@
     line-height: 160%;
     letter-spacing: -0.01em;
     color: #1c201e;
+
+    @include small-tablet {
+      max-width: 600px;
+      font-size: 16px;
+    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
+
+    .image {
+      max-width: 45px;
+      max-height: 45px;
+    }
   }
 
   &__name {
@@ -74,5 +118,10 @@
     font-size: 22px;
     line-height: 130%;
     color: #141813;
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-left: 10px;
+    }
   }
 }

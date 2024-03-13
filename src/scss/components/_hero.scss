@@ -1,5 +1,16 @@
 .hero {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  padding-top: 260px;
+  background-color: #F3F3F3;
+
+  @include tablet {
+    padding-top: 200px;
+  }
+
+  @include small-tablet {
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
 
   &__title {
     margin: 0;
@@ -21,11 +32,51 @@
       background-repeat: no-repeat;
       left: 145px;
       top: 25px;
+
+      @include tablet {
+        left: 105px;
+        top: 10px;
+      }
+
+      @include small-tablet {
+        left: 75px;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+      }
+
+      @include mobile {
+        left: 50px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @include tablet {
+      font-size: 55px;
+    }
+
+    @include small-tablet {
+      font-size: 35px;
+    }
+
+    @include mobile {
+      font-size: 25px;
     }
   }
 
   &__accent {
     margin-left: 80px;
+
+    @include small-tablet {
+      margin-left: 60px;
+    }
+
+    @include mobile {
+      margin-left: 40px;
+    }
   }
 
   &__text {
@@ -34,15 +85,214 @@
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 25px;
-    line-height: 64%;
+    line-height: 100%;
     text-align: center;
     color: #000;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__btn {
     padding: 13px 16px;
     display: block;
     margin: 0 auto;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    background: #efad81;
+  }
+}
+
+
+.hero-v2 {
+  padding-bottom: 80px;
+  padding-top: 260px;
+
+  @include tablet {
+    padding-top: 200px;
+  }
+
+  @include small-tablet {
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 101px;
+    line-height: 110%;
+    letter-spacing: 0em;
+    color: #000;
+
+    @include tablet {
+      font-size: 55px;
+    }
+
+
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #000;
+  }
+
+  &__btn {
+    padding: 13px 16px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    background: #efad81;
+  }
+
+  &__img {
+    margin-top: 16px;
+    box-shadow: -16px -16px 0 0 #efad81;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.hero-v3 {
+  padding-bottom: 30px;
+  margin-bottom: 95px;
+  background-image: url(../img/hero-v3-bg.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-top: 260px;
+
+  @include tablet {
+    padding-top: 200px;
+  }
+
+  @include small-tablet {
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  &--houses {
+    background-image: url(../img/hero-v3-houses.png);
+    padding-top: 230px;
+    padding-bottom: 90px;
+
+    @include tablet {
+      padding-top: 200px;
+    }
+
+    @include small-tablet {
+      padding-top: 150px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &--houses-inner {
+    background-image: url(../img/hero-v3-houses-inner.png);
+    padding-top: 230px;
+    padding-bottom: 60px;
+  }
+
+  &--contacts {
+    background-image: url(../img/hero-v3-contacts.png);
+    padding-top: 230px;
+    padding-bottom: 190px;
+
+    @include tablet {
+      padding-top: 200px;
+    }
+
+    @include small-tablet {
+      padding-top: 150px;
+      padding-bottom: 40px;
+      margin-bottom: 35px;
+    }
+  }
+
+
+
+  &__title {
+    max-width: 870px;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 60px;
+    letter-spacing: -0.01em;
+    color: #000;
+
+    &--big {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 101px;
+      line-height: 120%;
+      letter-spacing: 0em;
+      color: #000;
+
+      @include tablet {
+        font-size: 60px;
+      }
+    }
+
+    &--v5 {
+      max-width: 1070px;
+      margin-bottom: 105px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 75px;
+      letter-spacing: -0.01em;
+      color: #000;
+    }
+
+    &--contacts {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #000;
+  }
+
+  &__btn {
+    padding: 13px 16px;
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 16px;

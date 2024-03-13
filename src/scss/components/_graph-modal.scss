@@ -1,0 +1,88 @@
+.graph-modal {
+  &__content {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  &__container {
+
+    max-width: 450px;
+  }
+
+  &__caption {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+  }
+
+  &__name {
+    border: 1px solid #000;
+    padding: 8px 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+    max-width: 350px;
+  }
+
+  &__mail {
+    border: 1px solid #000;
+    padding: 8px 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+    max-width: 350px;
+  }
+
+  &__phone {
+    border: 1px solid #000;
+    padding: 8px 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+    max-width: 350px;
+  }
+
+  &__message {
+    border: 1px solid #000;
+    padding: 8px 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+    resize: none;
+    max-height: 120px;
+    max-width: 350px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 13px 36px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    background: #efad81;
+  }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+
+.wpcf7-spinner{
+  display: none !important;
+}

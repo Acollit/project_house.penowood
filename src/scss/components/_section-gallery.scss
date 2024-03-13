@@ -1,7 +1,36 @@
 .section-gallery {
   margin-bottom: 74px;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
   &__swiper {
     margin-bottom: 70px;
+
+
+    .image {
+
+      @include small-tablet {
+        max-height: 350px;
+        max-width: 350px;
+        object-fit: contain;
+        height: auto;
+      }
+
+      @include mobile {
+        max-height: 350px;
+        max-width: 450px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__line {
@@ -15,6 +44,16 @@
     margin-bottom: 21px;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding-top: 0px;
+    }
+
+
   }
 
   &__title {
@@ -25,6 +64,16 @@
     font-size: 48px;
     line-height: 110%;
     color: #000;
+
+    @include tablet {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -36,6 +85,11 @@
     font-size: 18px;
     letter-spacing: -0.01em;
     color: #979491;
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
   }
 
   &__btn {
@@ -46,9 +100,28 @@
     font-size: 20px;
     line-height: 120%;
     color: #000;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__svg {
     margin-right: 10px;
+    width: 47px;
+    height: 47px;
+
+    @include small-tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__img {
+
+    @include small-tablet {
+      max-height: 300px;
+    }
+
   }
 }

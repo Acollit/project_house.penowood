@@ -1,5 +1,4 @@
 .advantages {
-  background-image: url(../img/advantages-bg.png);
   position: relative;
 
   &::before {
@@ -24,6 +23,14 @@
     line-height: 110%;
     text-align: center;
     color: #000;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+    }
   }
 
   &__grid {
@@ -43,6 +50,11 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 170px;
+    }
   }
 
   &__item {
@@ -51,8 +63,34 @@
     position: relative;
     padding-bottom: 155px;
 
+    @include tablet {
+      padding-left: 0;
+      padding-bottom: 105px;
+    }
+
     &:nth-child(1) {
       border-right: 1px solid #000;
+
+      @include tablet {
+        border-right: none;
+        border-bottom: 1px solid #000;
+      }
+
+
+    }
+
+    &:nth-child(2) {
+
+      .advantages__subtitle::before {
+        content: '02.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
 
     }
 
@@ -62,11 +100,38 @@
       border-right: 1px solid #000;
       border-top: 1px solid #000;
       border-bottom: 1px solid #000;
+
+      .advantages__subtitle::before {
+        content: '03.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
+
+      @include tablet {
+        border-right: none;
+        border-bottom: none;
+      }
     }
 
     &:nth-child(4) {
       border-top: 1px solid #000;
       border-bottom: 1px solid #000;
+
+      .advantages__subtitle::before {
+        content: '04.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
     }
   }
 
@@ -82,27 +147,78 @@
     line-height: 110%;
     color: #000;
 
-    &::before {
-      content: '01.';
-      position: absolute;
-      left: 0;
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 150%;
-      color: #efad81;
+    @include small-tablet {
+      font-size: 30px;
     }
+
+    &:nth-child(1) {
+      &::before {
+        content: '01.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: '02.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        content: '03.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        content: '04.';
+        position: absolute;
+        left: 0;
+        font-family: var(--font5);
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 150%;
+        color: #efad81;
+      }
+    }
+
+
   }
 
   &__text {
     max-width: 500px;
     margin: 0;
-    font-family: var(--font-family);
+    font-family: var(--font5);
     font-weight: 500;
     font-size: 18px;
     line-height: 170%;
     letter-spacing: -0.01em;
     color: #979491;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__btn {
@@ -111,11 +227,17 @@
     display: inline-block;
     padding: 16px 17px;
     border: 1px solid #000;
-    font-family: var(--second-family);
+    font-family: var(--font5);
     font-weight: 500;
     font-size: 18px;
     line-height: 122%;
     text-align: center;
     color: #000;
+
+    @include tablet {
+      bottom: 30px;
+      font-size: 16px;
+      padding: 12px 17px;
+    }
   }
 }

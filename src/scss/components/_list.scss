@@ -4,10 +4,24 @@
   margin-bottom: 70px;
   padding: 40px 0px;
 
+  @include small-tablet {
+    margin-bottom: 40px;
+  }
+
+
+  @include small-tablet {
+    padding: 20px 0;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     padding: 0px 40px;
+
+    @include small-tablet {
+      padding: 0px;
+    }
+
   }
 
   &__item {
@@ -24,6 +38,14 @@
     line-height: 100%;
     text-align: center;
     color: #f0f0f0;
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__descr {
@@ -34,5 +56,13 @@
     line-height: 100%;
     text-align: center;
     color: #f0f0f0;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 }

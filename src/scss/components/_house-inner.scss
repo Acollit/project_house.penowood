@@ -1,0 +1,231 @@
+.house-inner {
+  &__content {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 130px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__info {
+    max-width: 346px;
+    width: 100%;
+    margin-left: 23px;
+  }
+
+  &__name {
+    max-width: 302px;
+    margin: 0;
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    color: #000;
+    border-bottom: 1px dashed #404040;
+
+    &--two {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+    margin-bottom: 22px;
+
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+
+    &:nth-child(1) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/size-icon.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/floor.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/room.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 0;
+        background-image: url(../img/bath.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+  }
+
+  &__descr {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: lowercase;
+    color: #000;
+  }
+
+  &__price {
+    margin: 0;
+    margin-bottom: 36px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 35px;
+    color: #000;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 11px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #2e2925;
+    background: #efad81;
+    border: 1px solid #d47e4f;
+    border-radius: 5px;
+    padding: 12px 0px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: #121212;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+    padding: 22px 0;
+    padding-left: 49px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 33px;
+      height: 40px;
+      left: 20px;
+      top: 10px;
+      background-image: url(../img/pdf.svg);
+    }
+  }
+
+  &__title {
+    max-width: 390px;
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #000;
+  }
+
+  &__text {
+    max-width: 400px;
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #000;
+
+    &--accent {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__dls {
+    display: flex;
+    margin-left: 140px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 100px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 200px;
+    margin: 0;
+    margin-top: 25px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #000;
+  }
+
+  &__shem {
+    margin-left: 190px;
+  }
+
+
+}

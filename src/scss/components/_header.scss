@@ -1,16 +1,35 @@
 .header {
   margin-bottom: 54px;
+  position: absolute;
+  width: 100%;
+
   &__content {
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 1px solid #0f0f0f;
+
+    @include small-tablet {
+      align-items: center;
+    }
   }
 
   &__logo {
     display: flex;
     align-items: flex-start;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      width: 60px;
+      height: 60px;
+    }
+
   }
 
   &__text {
@@ -21,6 +40,25 @@
     font-weight: 500;
     font-size: 25px;
     color: #000;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__box {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__descr {
@@ -92,6 +130,10 @@
   &__social {
     display: flex;
     flex-direction: column;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__list {
@@ -105,5 +147,16 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
+  }
+}
+
+
+.burger {
+
+  display: none;
+  @include burger;
+
+  @include tablet {
+    display: block;
   }
 }

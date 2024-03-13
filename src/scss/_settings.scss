@@ -20,11 +20,11 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
-  background-color: #efefef;
+  background-color: #F3F3F3;
+
 }
 
 img {
-  height: auto;
   max-width: 100%;
   object-fit: cover;
 }
@@ -84,6 +84,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  &--grid {
+    max-width: 1378px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -106,4 +110,7 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+.freehosting-2domains-link {
+  display: none;
 }
